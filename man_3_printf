@@ -1,0 +1,48 @@
+./ "The manpage of _printf project"
+.TH _PRINTF 3 "19 APRIL 2022" "1" "_printf manual"
+
+.SH NAME
+_printf()
+
+The _printf() -formated output conversion.
+
+.SH SYNOPSIS
+#include "main.h"
+.br
+#include <stdlib.h>
+.br
+#include <stdarg.h>
+.br
+.br
+int _printf(const char *format, ...)
+
+.SH DESCRIPTION
+The _printf() -
+produces an output according to the format described below and writes it to stdout.
+
+.SS The format stirng
+it is a character string, beginning and ending in its initial shift state, if any.
+
+.SS c
+If no l modifier is present, the int argument is converted to  an unsigned char, and the resulting character is written.
+
+.SS s
+If no l modifier is present: the const char * argument  is expected  to  be  a  pointer to an array of character type (pointer to a string).
+
+.SS %
+A '%' is written.  No argument is converted.  The complete conversion specification is '%%'.
+
+.SS Return value
+.br
+if the function is successful returns the number of characters.
+printed(excluding the null byte used to end output to strings).
+
+if an output error is encountered,a negative value is returned.
+
+.br
+.SH BUGS
+No known bugs
+.br 
+
+.SH AUTHOR
+Elizabeth Wangui.
